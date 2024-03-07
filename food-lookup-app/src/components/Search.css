@@ -1,0 +1,25 @@
+/* Search.css */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f1f3f4;
+    border-radius: 24px;
+    padding: 10px 20px;
+    width: 40%;
+    margin: 2%;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-left: 10px;
+    background-color: transparent;
+    /* Ensure the input has a transparent background */
+}
+
+.search-icon {
+    color: #5f6368;
+    font-size: 20px;
+}
