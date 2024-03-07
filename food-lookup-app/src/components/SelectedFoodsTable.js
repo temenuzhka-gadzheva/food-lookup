@@ -3,20 +3,20 @@ import './SelectedFoodsTable.css'; // Make sure to create this CSS file
 
 function SelectedFoodsTable({ selectedFoods }) {
   // Function to calculate total nutrients
-  const calculateTotals = () => {
+  const calculateTotalNutrients = () => {
     return selectedFoods.reduce(
       (totals, food) => {
-        totals.kcal += food.calories;
-        totals.protein += food.protein;
-        totals.fat += food.fats;
-        totals.carbs += food.carbs;
+        totals.kcal += food.calories * food.count;
+        totals.protein += food.protein * food.count;
+        totals.fat += food.fats * food.count;
+        totals.carbs += food.carbs * food.count;
         return totals;
       },
       { kcal: 0, protein: 0, fat: 0, carbs: 0 }
     );
   };
 
-  const totals = calculateTotals();
+  const totals = calculateTotalNutrients();
 
   return (
     <div className="food-table-container">
@@ -29,16 +29,18 @@ function SelectedFoodsTable({ selectedFoods }) {
             <th>Protein (g)</th>
             <th>Fat (g)</th>
             <th>Carbs (g)</th>
+            <th>Selected count</th>
           </tr>
         </thead>
         <tbody>
           {selectedFoods.map(food => (
             <tr key={food.id}>
               <td>{food.name}</td>
-              <td>{food.calories.toFixed(2)}</td>
-              <td>{food.protein.toFixed(2)}</td>
-              <td>{food.fats.toFixed(2)}</td>
-              <td>{food.carbs.toFixed(2)}</td>
+              <td>{(food.calories * food.count).toFixed(2)}</td>
+              <td>{(food.protein * food.count).toFixed(2)}</td>
+              <td>{(food.fats * food.count).toFixed(2)}</td>
+              <td>{(food.carbs * food.count).toFixed(2)}</td>
+              <td>{food.count}</td>
             </tr>
           ))}
           <tr className="totals-row">

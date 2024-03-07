@@ -32,11 +32,24 @@ function App() {
   };
 
   const handleAddToSelectedFoods = (foodToAdd) => {
-    const exists = selectedFoods.some(food => food.id === foodToAdd.id);
-    if (!exists) {
-      setSelectedFoods(prevSelectedFoods => [...prevSelectedFoods, foodToAdd]);
-    }
+    setSelectedFoods(prevSelectedFoods => {
+      // Check if the item already exists in the array
+      const existingItemIndex = prevSelectedFoods.findIndex(item => item.id === foodToAdd.id);
+      if (existingItemIndex > -1) {
+        // If it exists, create a new array with the count incremented
+        return prevSelectedFoods.map((item, index) => {
+          if (index === existingItemIndex) {
+            return { ...item, count: item.count + 1 };
+          }
+          return item;
+        });
+      } else {
+        // If it doesn't exist, add the new item with a count of 1
+        return [...prevSelectedFoods, { ...foodToAdd, count: 1 }];
+      }
+    });
   };
+
 
   return (
     <div className="App">
