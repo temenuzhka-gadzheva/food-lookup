@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Search from './components/Search';
 import FoodTable from './components/FoodTable';
 import SelectedFoodsTable from './components/SelectedFoodsTable';
-// Add any other imports you may need
+import AddFoodForm from './components/AddFoodForm';
 
 function App() {
   const [foods, setFoods] = useState([]);
@@ -50,15 +51,63 @@ function App() {
     });
   };
 
+  const handleAddFood = (newFood) => {
+    // Step 1: Validate the form data
+    if (!newFood.name || !newFood.calories || !newFood.protein || !newFood.carbs || !newFood.fats) {
+      alert('All fields are required');
+      return;
+    }
+
+    // Step 2: Make an HTTP POST request to the server
+    fetch('http://localhost:3001/foods', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newFood),
+    })
+      .then(response => {
+        // Step 3: Handle the server response
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json(); // This assumes that your server responds with the created food item as JSON
+      })
+      .then(data => {
+        // Here, 'data' is the response from the server after the food item has been successfully created
+        console.log('Success:', data);
+
+        // Step 4: Update the UI
+        // If you have a state variable that keeps track of the food items, update it here
+        // setFoods([...foods, data]); // Uncomment this if you have a 'foods' state in your component
+
+        // Optionally, navigate away from the form or clear the form
+        // history.push('/foods'); // Uncomment if using react-router's 'history' for navigation
+      })
+      .catch((error) => {
+        // Handle any errors here
+        console.error('Error:', error);
+      });
+  };
+
+  // Main page component
+  const MainPage = () => {
+    return (
+      <>
+        {selectedFoods.length > 0 && <SelectedFoodsTable selectedFoods={selectedFoods} />}
+        <Search onSearch={handleSearch} />
+        <FoodTable foods={filteredFoods} onRowClick={handleAddToSelectedFoods} />
+      </>
+    );
+  };
 
   return (
-    <div className="App">
-      <Search onSearch={handleSearch} />
-      {selectedFoods.length > 0 && (
-        <SelectedFoodsTable selectedFoods={selectedFoods} />
-      )}
-      <FoodTable foods={filteredFoods} onRowClick={handleAddToSelectedFoods} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/add-food" element={<AddFoodForm onAddFood={handleAddFood} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
