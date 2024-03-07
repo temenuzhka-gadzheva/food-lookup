@@ -1,7 +1,7 @@
 import React from 'react';
 import './FoodTable.css'; // Make sure to create this CSS file in the same directory
 
-const FoodTable = ({ foods}) => {
+const FoodTable = ({ foods, onRowClick}) => {
     return (
         <div className="food-table-container">
             <table className="food-table">
@@ -16,7 +16,7 @@ const FoodTable = ({ foods}) => {
                 </thead>
                 <tbody>
                     {foods.map(food => (
-                        <tr key={food.id}>
+                        <tr key={food.id} onClick={() => onRowClick(food)}>
                             <td>{food.name}</td>
                             <td>{food.calories}</td>
                             <td>{food.protein}</td>

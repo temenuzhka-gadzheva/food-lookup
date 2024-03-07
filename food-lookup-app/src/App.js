@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Search from './components/Search';
 import FoodTable from './components/FoodTable';
+import SelectedFoodsTable from './components/SelectedFoodsTable';
 // Add any other imports you may need
 
 function App() {
   const [foods, setFoods] = useState([]);
   const [filteredFoods, setFilteredFoods] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedFoods, setSelectedFoods] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:3001/foods')
@@ -29,10 +31,20 @@ function App() {
     }
   };
 
+  const handleAddToSelectedFoods = (foodToAdd) => {
+    const exists = selectedFoods.some(food => food.id === foodToAdd.id);
+    if (!exists) {
+      setSelectedFoods(prevSelectedFoods => [...prevSelectedFoods, foodToAdd]);
+    }
+  };
+
   return (
     <div className="App">
       <Search onSearch={handleSearch} />
-      <FoodTable foods={filteredFoods} />
+      {selectedFoods.length > 0 && (
+        <SelectedFoodsTable selectedFoods={selectedFoods} />
+      )}
+      <FoodTable foods={filteredFoods} onRowClick={handleAddToSelectedFoods} />
     </div>
   );
 }

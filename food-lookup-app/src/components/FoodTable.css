@@ -30,6 +30,17 @@
     background-color: #ddd;
 }
 
+.totals-row {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+.food-table-container h3 {
+  color: #4CAF50; 
+  margin-left: 2%; 
+  font-size: 1.5rem; 
+}
+
 /* Button styling */
 .food-table .edit-btn,
 .food-table .delete-btn {
