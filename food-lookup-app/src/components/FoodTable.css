@@ -1,25 +1,25 @@
 .food-table-container {
-    margin: 20px;
-    overflow-x: auto;
+    margin      : 20px;
+    overflow-x  : auto;
 }
 
 .food-table {
-    width: 70%;
-    margin: 2%;
-    border-collapse: collapse;
-    margin-top: 10px;
+    width           : 70%;
+    margin          : 2%;
+    margin-top      : 10px;
+    border-collapse : collapse;
 }
 
 .food-table th,
 .food-table td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
+    padding       : 8px;
+    text-align    : left;
+    border-bottom : 1px solid #ddd;
 }
 
 .food-table th {
-    background-color: #4CAF50;
-    color: white;
+    background-color  : #4CAF50;
+    color             : white;
 }
 
 .food-table tr:nth-child(even) {
@@ -36,25 +36,25 @@
 }
 
 .food-table-container h3 {
-  color: #4CAF50; 
-  margin-left: 2%; 
-  font-size: 1.5rem; 
+  margin-left : 2%; 
+  font-size   : 1.5rem; 
+  color       : #4CAF50; 
 }
 
 /* Button styling */
 .food-table .edit-btn,
 .food-table .delete-btn {
-  padding: 5px 10px;
-  margin: 0 5px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.8rem;
+  margin        : 0 5px;
+  padding       : 5px 10px;
+  font-size     : 0.8rem;
+  border        : none;
+  border-radius : 4px;
+  cursor        : pointer;
 }
 
 .food-table .edit-btn {
-  background-color: #4CAF50;
-  color: white;
+  background-color  : #4CAF50;
+  color             : white;
 }
 
 .food-table .edit-btn:hover {
@@ -63,7 +63,7 @@
 
 .food-table .delete-btn {
   background-color: #f44336;
-  color: white;
+  color           : white;
 }
 
 .food-table .delete-btn:hover {

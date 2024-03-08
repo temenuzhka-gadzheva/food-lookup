@@ -1,26 +1,24 @@
-/* Search.css */
 .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #f1f3f4;
-    border-radius: 24px;
-    padding: 10px 20px;
-    width: 40%;
-    margin-left: 2%;
-    margin-top: 5%;
+    display             : flex;
+    width               : 40%;
+    margin-left         : 2%;
+    margin-top          : 5%;
+    padding             : 10px 20px;
+    border-radius       : 24px;
+    align-items         : center;
+    background-color    : #f1f3f4;
 }
 
 .search-input {
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    margin-left: 10px;
-    background-color: transparent;
-    /* Ensure the input has a transparent background */
+    width               : 100%;
+    margin-left         : 10px;
+    font-size           : 16px;
+    border              : none;
+    outline             : none;
+    background-color    : transparent;
 }
 
 .search-icon {
-    color: #5f6368;
-    font-size: 20px;
+    font-size   : 20px;
+    color       : #5f6368;
 }

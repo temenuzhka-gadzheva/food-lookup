@@ -1,5 +1,5 @@
 import React from 'react';
-import './SelectedFoodsTable.css'; // Make sure to create this CSS file
+import './FoodTable.css';
 
 function SelectedFoodsTable({ selectedFoods }) {
   // Function to calculate total nutrients
