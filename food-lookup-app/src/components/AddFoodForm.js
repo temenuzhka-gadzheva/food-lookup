@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import './AddFoodForm.css';
 
 const AddFoodForm = ({ onAddFood }) => {
-  const navigate = useNavigate();
+  const navigate                = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     calories: '',
@@ -23,7 +22,6 @@ const AddFoodForm = ({ onAddFood }) => {
     navigate('/');
     window.location.reload();
   };
-
 
   return (
     <div className="form-container">

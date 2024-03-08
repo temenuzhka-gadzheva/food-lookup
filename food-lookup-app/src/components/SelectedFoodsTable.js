@@ -1,22 +1,9 @@
 import React from 'react';
 import './FoodTable.css';
+import { calculateTotalNutrients } from './utils/utils';
 
 function SelectedFoodsTable({ selectedFoods }) {
-  // Function to calculate total nutrients
-  const calculateTotalNutrients = () => {
-    return selectedFoods.reduce(
-      (totals, food) => {
-        totals.kcal += food.calories * food.count;
-        totals.protein += food.protein * food.count;
-        totals.fat += food.fats * food.count;
-        totals.carbs += food.carbs * food.count;
-        return totals;
-      },
-      { kcal: 0, protein: 0, fat: 0, carbs: 0 }
-    );
-  };
-
-  const totals = calculateTotalNutrients();
+  const totals = calculateTotalNutrients(selectedFoods);
 
   return (
     <div className="food-table-container">

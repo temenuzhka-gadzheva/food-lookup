@@ -2,11 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AddButton.css';
 
-function AddButton() {
-    let navigate = useNavigate(); // Hook to navigate
+const AddButton = () => {
+    let navigate = useNavigate();
 
     const navigateToAddFoodForm = () => {
-        navigate('/add-food'); // Function to navigate to AddFoodForm
+        navigate('/add-food');
     };
 
     return (

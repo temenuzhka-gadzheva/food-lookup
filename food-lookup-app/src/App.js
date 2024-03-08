@@ -7,9 +7,9 @@ import AddButton from './components/AddButton';
 import Search from './components/Search';
 
 function App() {
-  const [foods, setFoods] = useState([]);
+  const [foods, setFoods]                 = useState([]);
   const [filteredFoods, setFilteredFoods] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm]       = useState('');
   const [selectedFoods, setSelectedFoods] = useState([]);
 
   useEffect(() => {
@@ -25,8 +25,11 @@ function App() {
   const handleAddToSelectedFoods = (foodToAdd) => {
     setSelectedFoods(prevSelectedFoods => {
       const existingItemIndex = prevSelectedFoods.findIndex(item => item.id === foodToAdd.id);
+
       if (existingItemIndex > -1) {
+
         return prevSelectedFoods.map((item, index) => {
+          
           if (index === existingItemIndex) {
             return { ...item, count: item.count + 1 };
           }
@@ -67,15 +70,16 @@ function App() {
 
   const handleSearch = useCallback((term) => {
     setSearchTerm(term);
+   
     if (!term) {
       setFilteredFoods(foods);
     } else {
       setFilteredFoods(foods.filter(food =>
         food.name.toLowerCase().includes(term.toLowerCase())
       ));
+
     }
   }, [foods]); 
-
 
   const MainPage = () => {
     return (
