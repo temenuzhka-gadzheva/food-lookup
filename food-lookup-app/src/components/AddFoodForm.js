@@ -16,7 +16,7 @@ const AddFoodForm = ({ onAddFood }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     onAddFood(formData);
-    // reset form or navigate away after submission
+    
   };
 
   return (

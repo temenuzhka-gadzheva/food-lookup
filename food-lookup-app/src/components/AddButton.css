@@ -1,0 +1,20 @@
+/* AddButton.css */
+.add-product-button {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 3%;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-product-button:hover {
+    background-color: #45a049;
+    /* Darker green on hover */
+}

@@ -49,6 +49,7 @@ function SelectedFoodsTable({ selectedFoods }) {
             <td>{totals.protein.toFixed(2)}</td>
             <td>{totals.fat.toFixed(2)}</td>
             <td>{totals.carbs.toFixed(2)}</td>
+            <td></td>
           </tr>
         </tbody>
       </table>

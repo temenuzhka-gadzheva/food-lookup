@@ -1,5 +1,5 @@
 import React from 'react';
-import './FoodTable.css'; // Make sure to create this CSS file in the same directory
+import './FoodTable.css';
 
 const FoodTable = ({ foods, onRowClick}) => {
     return (
