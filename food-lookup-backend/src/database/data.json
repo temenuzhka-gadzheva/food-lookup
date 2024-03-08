@@ -1,124 +1,124 @@
 {
-    "foods": [
-        {
-            "id": "502be7dc-b107-427e-a159-a54353ef12a2",
-            "name": "Apple",
-            "calories": 52,
-            "protein": 0.3,
-            "carbs": 14,
-            "fats": 0.2
-        },
-        {
-            "id": "fc551bf3-8f49-4781-9979-853030e2fd61",
-            "name": "Banana",
-            "calories": 89,
-            "protein": 1.1,
-            "carbs": 23,
-            "fats": 0.3
-        },
-        {
-            "id": "5851a27c-1fe0-4821-b95f-4b0b1ec2773a",
-            "name": "Chicken Breast",
-            "calories": 165,
-            "protein": 31,
-            "carbs": 0,
-            "fats": 3.6
-        },
-        {
-            "id": "1e90de73-02aa-4e23-a2d3-6a65d7935c7c",
-            "name": "Broccoli",
-            "calories": 34,
-            "protein": 2.8,
-            "carbs": 7,
-            "fats": 0.4
-        },
-        {
-            "id": "e4247c83-c219-400f-ac80-a3f56386f11e",
-            "name": "Almonds",
-            "calories": 579,
-            "protein": 21,
-            "carbs": 22,
-            "fats": 50
-        },
-        {
-            "id": "a257319e-50b4-46de-aeb2-e768a7d3b6d9",
-            "name": "Eggs",
-            "calories": 155,
-            "protein": 13,
-            "carbs": 1.1,
-            "fats": 11
-        },
-        {
-            "id": "8d8833e1-519f-4429-a8e4-68efa7d1ce64",
-            "name": "Oats",
-            "calories": 389,
-            "protein": 16.9,
-            "carbs": 66,
-            "fats": 6.9
-        },
-        {
-            "id": "5b3da035-c328-4711-ab5a-0444987a52fc",
-            "name": "Sweet Potato",
-            "calories": 86,
-            "protein": 1.6,
-            "carbs": 20,
-            "fats": 0.1
-        },
-        {
-            "id": "c983cd05-e2c3-496c-934e-0152161b67e9",
-            "name": "Salmon",
-            "calories": 208,
-            "protein": 20,
-            "carbs": 0,
-            "fats": 13
-        },
-        {
-            "id": "3a52e47a-da3a-4a83-8138-3d4c90649a35",
-            "name": "Beef",
-            "calories": 250,
-            "protein": 26,
-            "carbs": 0,
-            "fats": 15
-        },
-        {
-            "id": "3d409eaa-87ff-491e-b479-f4837b972bc0",
-            "name": "Brown Rice",
-            "calories": 123,
-            "protein": 2.6,
-            "carbs": 25.6,
-            "fats": 0.9
-        },
-        {
-            "id": "6ec0b042-d1d5-46cc-acc0-178d04a825ae",
-            "name": "Avocado",
-            "calories": 160,
-            "protein": 2,
-            "carbs": 9,
-            "fats": 15
-        },
-        {
-            "id": "43f8ed32-7f21-4c80-aa22-d1263172d535",
-            "name": "Cottage Cheese",
-            "calories": 98,
-            "protein": 11,
-            "carbs": 3.4,
-            "fats": 4.3
-        },
-        {
-            "id": "0400bcd1-7620-4128-b0a8-ac96c9377cd0",
-            "name": "Greek Yogurt",
-            "calories": 59,
-            "protein": 10,
-            "carbs": 3.6,
-            "fats": 0.4
-        },
-        {
-            "id": "400b5b88-e402-44a3-a963-febca7488b98",
-            "name": "Spinach",
-            "calories": 23,
-            "protein": 2.9,
-            "carbs": 3.6,
-            "fats": 0.4
-        }
-    ]
+  "foods": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "calories": 52,
+      "protein": 0.3,
+      "carbs": 14,
+      "fats": 0.2
+    },
+    {
+      "id": 2,
+      "name": "Banana",
+      "calories": 89,
+      "protein": 1.1,
+      "carbs": 23,
+      "fats": 0.3
+    },
+    {
+      "id": 3,
+      "name": "Chicken Breast",
+      "calories": 165,
+      "protein": 31,
+      "carbs": 0,
+      "fats": 3.6
+    },
+    {
+      "id": 4,
+      "name": "Broccoli",
+      "calories": 34,
+      "protein": 2.8,
+      "carbs": 7,
+      "fats": 0.4
+    },
+    {
+      "id": 5,
+      "name": "Almonds",
+      "calories": 579,
+      "protein": 21,
+      "carbs": 22,
+      "fats": 50
+    },
+    {
+      "id": 6,
+      "name": "Eggs",
+      "calories": 155,
+      "protein": 13,
+      "carbs": 1.1,
+      "fats": 11
+    },
+    {
+      "id": 7,
+      "name": "Oats",
+      "calories": 389,
+      "protein": 16.9,
+      "carbs": 66,
+      "fats": 6.9
+    },
+    {
+      "id": 8,
+      "name": "Sweet Potato",
+      "calories": 86,
+      "protein": 1.6,
+      "carbs": 20,
+      "fats": 0.1
+    },
+    {
+      "id": 9,
+      "name": "Salmon",
+      "calories": 208,
+      "protein": 20,
+      "carbs": 0,
+      "fats": 13
+    },
+    {
+      "id": 10,
+      "name": "Beef",
+      "calories": 250,
+      "protein": 26,
+      "carbs": 0,
+      "fats": 15
+    },
+    {
+      "id": 11,
+      "name": "Brown Rice",
+      "calories": 123,
+      "protein": 2.6,
+      "carbs": 25.6,
+      "fats": 0.9
+    },
+    {
+      "id": 12,
+      "name": "Avocado",
+      "calories": 160,
+      "protein": 2,
+      "carbs": 9,
+      "fats": 15
+    },
+    {
+      "id": 13,
+      "name": "Cottage Cheese",
+      "calories": 98,
+      "protein": 11,
+      "carbs": 3.4,
+      "fats": 4.3
+    },
+    {
+      "id": 14,
+      "name": "Greek Yogurt",
+      "calories": 59,
+      "protein": 10,
+      "carbs": 3.6,
+      "fats": 0.4
+    },
+    {
+      "id": 15,
+      "name": "Spinach",
+      "calories": 23,
+      "protein": 2.9,
+      "carbs": 3.6,
+      "fats": 0.4
+    }
+  ]
 }

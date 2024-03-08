@@ -44,7 +44,6 @@ function App() {
       return;
     }
 
-    // Step 2: Make an HTTP POST request to the server
     fetch('http://localhost:3001/foods', {
       method: 'POST',
       headers: {
@@ -53,25 +52,15 @@ function App() {
       body: JSON.stringify(newFood),
     })
       .then(response => {
-        // Step 3: Handle the server response
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.json(); // This assumes that your server responds with the created food item as JSON
+        return response.json();
       })
       .then(data => {
-        // Here, 'data' is the response from the server after the food item has been successfully created
-        console.log('Success:', data);
-
-        // Step 4: Update the UI
-        // If you have a state variable that keeps track of the food items, update it here
-        // setFoods([...foods, data]); // Uncomment this if you have a 'foods' state in your component
-
-        // Optionally, navigate away from the form or clear the form
-        // history.push('/foods'); // Uncomment if using react-router's 'history' for navigation
+        setFoods([...foods, data]); 
       })
       .catch((error) => {
-        // Handle any errors here
         console.error('Error:', error);
       });
   };

@@ -36,19 +36,19 @@ function SelectedFoodsTable({ selectedFoods }) {
           {selectedFoods.map(food => (
             <tr key={food.id}>
               <td>{food.name}</td>
-              <td>{(food.calories * food.count).toFixed(2)}</td>
-              <td>{(food.protein * food.count).toFixed(2)}</td>
-              <td>{(food.fats * food.count).toFixed(2)}</td>
-              <td>{(food.carbs * food.count).toFixed(2)}</td>
+              <td>{(food.calories * food.count).toFixed(1)}</td>
+              <td>{(food.protein * food.count).toFixed(1)}</td>
+              <td>{(food.fats * food.count).toFixed(1)}</td>
+              <td>{(food.carbs * food.count).toFixed(1)}</td>
               <td>{food.count}</td>
             </tr>
           ))}
           <tr className="totals-row">
             <td>Total</td>
-            <td>{totals.kcal.toFixed(2)}</td>
-            <td>{totals.protein.toFixed(2)}</td>
-            <td>{totals.fat.toFixed(2)}</td>
-            <td>{totals.carbs.toFixed(2)}</td>
+            <td>{totals.kcal.toFixed(1)}</td>
+            <td>{totals.protein.toFixed(1)}</td>
+            <td>{totals.fat.toFixed(1)}</td>
+            <td>{totals.carbs.toFixed(1)}</td>
             <td></td>
           </tr>
         </tbody>
